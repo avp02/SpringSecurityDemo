@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -15,7 +14,7 @@ import java.util.stream.Stream;
 @RequestMapping("/api/v1/developers")
 public class DeveloperRestController {
 
-    private List<Developer> developers = Stream.of(
+    private final List<Developer> developers = Stream.of(
       new Developer(1L, "Ivan", "Ivanov"),
       new Developer(2L, "Sergei", "Sergeev"),
       new Developer(3L, "Vova", "Vavanov")
